@@ -14,4 +14,20 @@ model User {
   password  String
   name      String?
   createdAt DateTime        @default(now())
+
+  history   QueryHistory[]
+}
+
+
+model QueryHistory {
+  id        Int       @id @default(autoincrement())
+  query     String
+  status    String
+  type      String?
+  message   String?
+
+  userId    Int?
+  user      User?     @relation(fields: [userId], references: [id])
+
+  createdAt DateTime  @default(now())
 }
