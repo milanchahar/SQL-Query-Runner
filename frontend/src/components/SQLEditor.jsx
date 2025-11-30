@@ -25,3 +25,25 @@ useEffect(() => {
               if (onExecute) onExecute(toRun);
               return true;
             }
+            },
+          {
+            key: "Mod-Enter",
+            run(view) { // Ctrl/Cmd+Enter also runs whole cell
+              const { from, to } = view.state.selection.main;
+              const selection = view.state.doc.sliceString(from, to);
+              const toRun = selection && selection.trim() ? selection : view.state.doc.toString();
+              if (onExecute) onExecute(toRun);
+              return true;
+            }
+          }
+        ]),
+        sql(),
+        autocompletion({ override: [autoCompleteSQL] }),
+        EditorView.updateListener.of((update) => {
+          if (update.changes && onChange) onChange(update.state.doc.toString());
+        }),
+        EditorView.domEventHandlers({
+          focus: (event, view) => {
+            if (onFocus) onFocus();
+          }
+        }),
