@@ -56,3 +56,4 @@ useEffect(() => {
 
     const view = new EditorView({ state, parent: editorRef.current });
     return () => view.destroy();
+      }, [tables]); // re-init when schema loaded (so autocomplete has data)
