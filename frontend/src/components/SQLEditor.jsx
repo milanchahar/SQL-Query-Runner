@@ -51,3 +51,7 @@ useEffect(() => {
           "&": { minHeight: "180px", border: "1px solid #ccc", background: "#fff" },
           ".cm-content": { fontSize: "15px", padding: "8px" }
         })
+        ]
+    });
+
+    const view = new EditorView({ state, parent: editorRef.current });
