@@ -47,3 +47,7 @@ useEffect(() => {
             if (onFocus) onFocus();
           }
         }),
+        EditorView.theme({
+          "&": { minHeight: "180px", border: "1px solid #ccc", background: "#fff" },
+          ".cm-content": { fontSize: "15px", padding: "8px" }
+        })
