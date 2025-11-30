@@ -3,6 +3,7 @@ import { EditorState } from "@codemirror/state";
 import { EditorView, keymap } from "@codemirror/view";
 import { defaultKeymap } from "@codemirror/commands";
 import { sql } from "@codemirror/lang-sql";
+import { autocompletion } from "@codemirror/autocomplete";
 
 export default function SQLEditor({ value, onChange, onExecute, onFocus }) {
   const editorRef = useRef(null);
