@@ -41,7 +41,7 @@ Users can perform all major SQL operations like **CREATE**, **INSERT**, **UPDATE
 | Name | Role | Responsibilities |
 |------|------|------------------|
 | **Aditya Sinha** | Full Stack Developer | Designed frontend UI, integrated React with backend APIs, handled Express + Prisma setup and database schema creation |
-| **Milan Chahar** | Frontend Developer | Developed Chrome extension interface using React and TailwindCSS, implemented CodeMirror SQL editor with syntax highlighting and auto-completion |
+| **Milan kumar** | Frontend Developer | Developed Chrome extension interface using React and TailwindCSS, implemented CodeMirror SQL editor with syntax highlighting and auto-completion |
 | **Sahil Singh** | Backend Developer | Built Node.js + Express backend for handling SQL query execution, integrated Prisma/Sequelize ORM, implemented API routes for database connectivity (MySQL, PostgreSQL, SQLite) |
 | **AN Pavan Sai** | Database & Testing Engineer | Configured database connections, tested query executions and data visualization, implemented export/import (CSV, Excel, PDF) and random table generation features |
 
